@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>GRID BOOTSTRAP</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body data-spy="scroll" data-target="#menuGrid" data-offset="50">
+	<main class="container-fluid">
+		<header class="text-center border-bottom border-dark">
+			<h1 class="display-1">BOOTSTRAP's GRID</h1>
+			<legend class="lead mb-4">Puissant outil de grille pour créer des pages responsives</legend>
+		</header>
+		<section class="row">
+			<section id="contentSection" class="col-sm-9 p-5">
+				<!-- Start How it works -->
+				<section id="Howitworks">
+					<h1 class="pt-5">Comment ça marche</h1>
+					<p class="lead">Le système de grille de Bootstrap utilise des conteneurs, de lignes et de colonnes pour mettre en forme et aligner le contenu.<br>Il est construit avec flexbox et entièrement responsive.</p>
+					<hr>
+					<h4>Exemple :</h4>
+					<div class="container border border-dark mb-5">
+						<div class="row">
+							<div class="col-sm bg-danger p-5">
+								One of three columns
+							</div>
+							<div class="col-sm bg-warning p-5">
+								One of three columns
+							</div>
+							<div class="col-sm bg-info p-5">
+								One of three columns
+							</div>
+						</div>
+					</div>
+					<img src="Images/CaptureHowitwork.png" class="img-fluid mb-3">
+					<p class="lead text-muted">L'exemple ci-dessus crée trois colonnes de même largeur pour des petits, moyens, grands et très grands appareils à l'aide des classes prédéfinies. Les colonnes sont centrées dans la page avec la classe .container.</p>
+				</section>
+				<!-- End How it works -->
+				<hr class="mt-5">
+				<!-- Start Grid options -->
+				<section id="Gridoptions">
+					<h1 class="pt-4">Options de grille</h1>
+					<p class="lead">Bootstrap utilise les unités <span class="text-danger">ems</span> ou <span class="text-danger">rems</span> pour définir la plupart des tailles, les <span class="text-danger">px</span> sont utilisés pour les points d'arrêt de la grille et les largeurs de conteneur. En effet, la largeur de la fenêtre d'affichage est en pixels et ne change pas avec la taille de la police.</p>
+					<h4>Tableau pratique :</h4>
+					<img src="Images/CaptureGridoptions.png" class="img-fluid mb-3">
+				</section>
+				<!-- End Grid options -->
+				<hr class="mt-5">
+				<!-- Start Auto-layout columns -->
+				<section id="Autolayoutcolumns">
+					<h1 class="pt-4">Auto-layout columns</h1>
+					<p class="lead">Utilisisation des classes de colonnes spécifiques aux points d'arrêt pour faciliter le dimensionnement des colonnes sans les numérotées</p>
+					<!-- Start Equal-width -->
+					<section id="Equalwidth">
+						<h2 class="pt-3">Equal-width</h2>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">
+									1 of 2
+								</div>
+								<div class="col bg-warning p-5">
+									2 of 2
+								</div>
+							</div>
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">
+									1 of 3
+								</div>
+								<div class="col bg-warning p-5">
+									2 of 3
+								</div>
+								<div class="col bg-info p-5">
+									3 of 3
+								</div>
+							</div>
+						</div>
+						<img src="Images/CaptureEqualwidth.png" class="img-fluid mb-3">
+						<p class="lead text-muted">Les colonnes de même largeur peuvent être divisées en plusieurs lignes, mais il peut y avoir des bugs avec des anciens navigateur.<br>Il existe des solutions de contournement pour les anciennes versions de navigateur comme l'exemple ci-dessous.</p>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">Column</div>
+								<div class="col bg-info p-5">Column</div>
+								<div class="w-100"></div>
+								<div class="col bg-success p-5">Column</div>
+								<div class="col bg-warning p-5">Column</div>
+							</div>
+						</div>
+						<img src="Images/CaptureEqualwidthandbreak.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Equal-width -->
+
+					<!-- Start Setting one column width -->
+					<section id="Settingonecolumnwidth">
+						<h2 class="pt-3">Setting one column width</h2>
+						<p class="lead">On peut définir la largeur d'une colonne et redimensionner automatiquement les colonnes soeurs.</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">
+									1 of 3 
+								</div>
+								<div class="col-6 bg-warning p-5">
+									2 of 3 (wider)
+								</div>
+								<div class="col bg-info p-5">
+									3  of 3 
+								</div>
+							</div>
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">
+									1 of 3
+								</div>
+								<div class="col-4 bg-warning p-5">
+									2 of 3 (wider)
+								</div>
+								<div class="col bg-info p-5">
+									3 of 3
+								</div>
+							</div>
+						</div>
+						<img src="Images/CaptureSettingonecolumnwidth.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Setting one column width -->
+
+					<!-- Start Variable width content -->
+					<section id="Variablewidthcontent">
+						<h2 class="pt-3">Variable width content</h2>
+						<p class="lead">On peut Utiliser les classes <span class="text-danger"> col-{breakpoint}-auto</span> pour dimensionner les colonnes en fonction de la largeur naturelle de leur contenu.</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row justify-content-md-center border border-dark mb-5">
+								<div class="col col-lg-2 bg-danger p-5">
+									1 of 3 
+								</div>
+								<div class="col-md-auto bg-warning p-5">
+									Variable width content
+								</div>
+								<div class="col col-lg-2 bg-info p-5">
+									3  of 3 
+								</div>
+							</div>
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">
+									1 of 3 
+								</div>
+								<div class="col-md-auto bg-warning p-5">
+									Variable width content
+								</div>
+								<div class="col col-lg-2 bg-info p-5">
+									3  of 3 
+								</div>
+							</div>
+						</div>
+						<img src="Images/CaptureVariablewidthcontent.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Variable width content -->
+
+					<!-- Start Equal-width multi-row -->
+					<section id="Equalwidthmultirow">
+						<h2 class="pt-3">Equal-width multi-row</h2>
+						<p class="lead">On peut créer des colonnes de largeur égale qui s'étendent sur plusieurs lignes en insérant le classe <span class="text-danger">.w-100</span> à l'endroit où on souhaite que les colonnes se mettent sur une nouvelle ligne.</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">Column</div>
+								<div class="col bg-info p-5">Column</div>
+								<div class="w-100"></div>
+								<div class="col bg-success p-5">Column</div>
+								<div class="col bg-warning p-5">Column</div>
+							</div>
+						</div>
+						<img src="Images/CaptureEqualwidthmultirow.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Equal-width multi-row -->	
+				</section>
+				<!-- End Auto-layout columns -->
+				<hr class="mt-5">
+				<!-- Start Responsive classes -->
+				<section id="Responsiveclasses">
+					<h1 class="pt-4">Responsive classes</h1>
+					<p class="lead">La grille de Bootstrap comprend cinq niveaux de classes prédéfinies pour la création de mise en page responsive.</p>
+					<!-- Start All breakpoints -->
+					<section id="Allbreakpoints">
+						<h2 class="pt-3">All breakpoints</h2>
+						<p class="lead">Pour des grilles identiques sur tous les appareils on utilisera les classes <span class="text-danger">.col</span> et <span class="text-danger">.col- *</span>. On Spécifiera une classe numérotée que lorsque on aura besoin d'une colonne de taille particulière.</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col bg-danger p-5">col</div>
+								<div class="col bg-warning p-5">col</div>
+								<div class="col bg-success p-5">col</div>
+								<div class="col bg-info p-5">col</div>
+							</div>
+							<div class="row border border-dark mb-5">
+								<div class="col-8 bg-danger p-5">col-8</div>
+								<div class="col-4 bg-warning p-5">col-4</div>
+							</div>
+						</div>
+						<img src="Images/CaptureAllbreakpoints.png" class="img-fluid mb-3">
+					</section>
+					<!-- End All breakpoints -->
+
+					<!-- Start Stacked to horizontal -->
+					<section id="Stackedtohorizontal">
+						<h2 class="pt-3">Stacked to horizontal</h2>
+						<p class="lead">En utilisant un seul ensemble de classes <span class="text-danger">.col-sm-*</span>, On peut créer une grille qui sera empilé et à l'horizontal aux points d'arrêt prédéfinis (<span class="text-danger">sm md lg xl</span>).</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row border border-dark mb-5">
+								<div class="col-sm-8 bg-danger p-5">col-sm-8</div>
+								<div class="col-sm-4 bg-warning p-5">col-sm-4</div>
+							</div>
+							<div class="row border border-dark mb-5">
+								<div class="col-sm bg-danger p-5">col-sm</div>
+								<div class="col-sm bg-warning p-5">col-sm</div>
+								<div class="col-sm bg-info p-5">col-sm</div>
+							</div>
+						</div>
+						<img src="Images/CaptureStackedtohorizontal.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Stacked to horizontal -->
+
+					<!-- Start Mix and match -->
+					<section id="Mixandmatch">
+						<h2 class="pt-3">Mix and match</h2>
+						<p class="lead">On peut combiner différentes classes pour chaque niveau si nécessaire.</p>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<!-- Empile les colonnes sur mobile en mettant une full-width et l'autre half-width -->
+							<div class="row border border-dark mb-5">
+								<div class="col-12 col-md-8 bg-danger p-5">.col-12 .col-md-8</div>
+								<div class="col-6 col-md-4 bg-warning p-5">.col-6 .col-md-4</div>
+							</div>
+							<!-- Les colonnes démarre à 50% de largeur sur mobile et passe à 33.3% de largeur sur desktop -->
+							<div class="row border border-dark mb-5">
+								<div class="col-6 col-md-4 bg-danger p-5">.col-6 .col-md-4</div>
+								<div class="col-6 col-md-4 bg-warning p-5">.col-6 .col-md-4</div>
+								<div class="col-6 col-md-4 bg-info p-5">.col-6 .col-md-4</div>
+							</div>
+							<!-- Les colonnes seront toujours à 50% de largeur sur tous les appareils -->
+							<div class="row border border-dark mb-5">
+								<div class="col-6 bg-danger p-5">.col-6</div>
+								<div class="col-6 bg-warning p-5">.col-6</div>
+							</div>
+						</div>
+						<img src="Images/CaptureMixandmatch.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Mix and match -->
+
+					<!-- Start Gutters -->
+					<section id="Gutters">
+						<h2 class="pt-3">Gutters</h2>
+						<p class="lead">Les gouttières peuvent être ajustées en fonction des classes de remplissage et des marges négatives spécifiques aux points d'arrêt. Pour changer les gouttières d’une ligne donnée, on associe une margin négative sur le <span class="text-danger">.row</span> et un padding correspondant sur le <span class="text-danger">.cols</span>. Les conteneurs <span class="text-danger">.container</span> ou <span class="text-danger">.container-fluid</span> doivent également être ajustés pour éviter les débordements indésirables, en utilisant un padding correspondant.</p>
+						<h4>Exemple :</h4>
+						<div class="container px-lg-5 border border-dark mb-5">
+							<div class="row mx-lg-n5">
+								<div class="col py-5 px-lg-5 border bg-danger">Custom column padding</div>
+								<div class="col py-5 px-lg-5 border bg-warning">Custom column padding</div>
+							</div>
+						</div>
+						<img src="Images/CaptureGutters.png" class="img-fluid mb-3">
+						<p class="lead text-muted">Dans cet exemple On a augmenté le padding left-right de <span class="text-danger">.col</span> avec <span class="text-danger">.px-lg-5</span>, on compense avec un margin left-right négative avec <span class="text-danger">.mx-lg-n5</span> sur le <span class="text-danger">.row</span> parent, puis ajusté le conteneur <span class="text-danger">.container</span> avec un padding left-right <span class="text-danger">.px-lg-5</span>.</p>
+					</section>
+					<!-- End Gutters -->	
+				</section>
+				<!-- End Responsive classes -->
+				<hr class="mt-5">
+				<!-- Start Alignment -->
+				<section id="Alignment">
+					<h1 class="pt-4">Alignment</h1>
+					<p class="lead">Utilitaires d'alignement flexbox pour aligner les colonnes verticalement et horizontalement</p>
+					<!-- Start Vertical alignment -->
+					<section id="Verticalalignment">
+						<h2 class="pt-3">Vertical alignment</h2>
+						<h4>Exemple :</h4>
+						<div class="container">
+							<div class="row align-items-start border border-dark mb-3" style="height: 300px">
+								<div class="col bg-danger p-5">column 1/3</div>
+								<div class="col bg-warning p-5">column 2/3</div>
+								<div class="col bg-success p-5">column 3/3</div>
+							</div>
+							<div class="row align-items-center border border-dark mb-3" style="height: 300px">
+								<div class="col bg-danger p-5">column 1/3</div>
+								<div class="col bg-warning p-5">column 2/3</div>
+								<div class="col bg-success p-5">column 3/3</div>
+							</div>
+							<div class="row align-items-end border border-dark mb-3" style="height: 300px">
+								<div class="col bg-danger p-5">column 1/3</div>
+								<div class="col bg-warning p-5">column 2/3</div>
+								<div class="col bg-success p-5">column 3/3</div>
+							</div>
+						</div>
+						<img src="Images/CaptureVerticalalignment01.png" class="img-fluid mb-3">
+						<div class="container">
+							<div class="row border border-dark mb-3" style="height: 300px">
+								<div class="col align-self-start bg-danger p-5">column 1/3</div>
+								<div class="col align-self-center bg-warning p-5">column 2/3</div>
+								<div class="col align-self-end bg-success p-5">column 3/3</div>
+							</div>
+						</div>
+						<img src="Images/CaptureVerticalalignment02.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Vertical alignment -->
+
+					<!-- Start Horizontal alignment -->
+					<section id="Horizontalalignment">
+						<h2 class="pt-3">Horizontal alignment</h2>
+						<h4>Exemple :</h4>
+						<div class="container border border-dark mb-3">
+							<div class="row justify-content-start mb-2">
+								<div class="col-4 bg-danger p-5">column 1/2</div>
+								<div class="col-4 bg-warning p-5">column 2/2</div>
+							</div>
+							<div class="row justify-content-center mb-2">
+								<div class="col-4 bg-danger p-5">column 1/2</div>
+								<div class="col-4 bg-warning p-5">column 2/2</div>
+							</div>
+							<div class="row justify-content-end mb-2">
+								<div class="col-4 bg-danger p-5">column 1/2</div>
+								<div class="col-4 bg-warning p-5">column 2/2</div>
+							</div>
+							<div class="row justify-content-around mb-2">
+								<div class="col-4 bg-danger p-5">column 1/2</div>
+								<div class="col-4 bg-warning p-5">column 2/2</div>
+							</div>
+							<div class="row justify-content-between">
+								<div class="col-4 bg-danger p-5">column 1/2</div>
+								<div class="col-4 bg-warning p-5">column 2/2</div>
+							</div>
+						</div>
+						<img src="Images/CaptureHorizontalalignment.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Horizontal alignment -->
+
+					<!-- Start No gutters -->
+					<section id="Nogutters">
+						<h2 class="pt-3">No gutters</h2>
+						<p class="lead">Les gouttières entre les colonnes peuvent être supprimées avec la classe <span class="text-danger">.no-gouttières</span>. Cela supprime les margins négatives de <span class="text-danger">.row</span> et le padding horizontal de toutes les colonnes enfants.</p>
+						<h4>Exemple :</h4>
+						<div class="container border border-dark mb-5">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-6 col-md-8 bg-danger py-5">.col-12 .col-sm-6 .col-md-8</div>
+								<div class="col-6 col-md-4 bg-warning py-5">.col-6 .col-md-4</div>
+							</div>
+						</div>
+						<img src="Images/CaptureNogutters.png" class="img-fluid mb-3">
+					</section>
+					<!-- End No gutters -->
+
+					<!-- Start Column wrapping -->
+					<section id="Columnwrapping">
+						<h2 class="pt-3">Column wrapping</h2>
+						<p class="lead">Si plus de 12 colonnes sont placées sur une seule ligne, chaque groupe de colonnes supplémentaires sera inséré sur une nouvelle ligne.</p>
+						<h4>Exemple :</h4>
+						<div class="container border border-dark mb-5">
+							<div class="row">
+								<div class="col-9 bg-danger py-5">.col-9</div>
+								<div class="col-4 bg-warning py-5">.col-4</div>
+								<div class="col-6 bg-info py-5">.col-6</div>
+							</div>
+						</div>
+						<img src="Images/CaptureColumnwrapping.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Column wrapping -->
+
+					<!-- Start Column breaks -->
+					<section id="Columnbreaks">
+						<h2 class="pt-3">Column breaks</h2>
+						<p class="lead">Mettre les colonnes sur une nouvelle ligne nécessite d'ajoutez un élément de largeur 100% si on veut encapsuler les colonnes sur une nouvelle ligne. Normalement, ceci est fait avec plusieurs blocs qui ont la classe <span class="text-danger">.row</span>, mais toutes les méthodes d'implémentation ne peuvent pas en prendre compte.</p>
+						<h4>Exemple :</h4>
+						<div class="container border border-dark mb-5">
+							<div class="row">
+								<div class="col-6 col-sm-3 border bg-danger py-5">.col-6 .col-sm-3</div>
+								<div class="col-6 col-sm-3 border bg-warning py-5">.col-6 .col-sm-3</div>
+								<!-- Force next columns to break to new line -->
+								<div class="w-100"></div>
+								<div class="col-6 col-sm-3 border bg-danger py-5">.col-6 .col-sm-3</div>
+								<div class="col-6 col-sm-3 border bg-warning py-5">.col-6 .col-sm-3</div>
+							</div>
+						</div>
+						<img src="Images/CaptureColumnbreaks01.png" class="img-fluid mb-3">
+						<p class="lead">On peut également appliquer ce changement de ligne avec des points d'arrêt spécifiques avec des classes d'affichage responsive prédéfinis.</p>
+						<div class="container border border-dark mb-5">
+							<div class="row">
+								<div class="col-6 col-sm-4 border bg-danger py-5">.col-6 .col-sm-4</div>
+								<div class="col-6 col-sm-4 border bg-warning py-5">.col-6 .col-sm-4</div>
+								<!-- Force next columns to break to new line at md breakpoint and up -->
+								<div class="w-100 d-none d-md-block"></div>
+								<div class="col-6 col-sm-4 border bg-danger py-5">.col-6 .col-sm-4</div>
+								<div class="col-6 col-sm-4 border bg-warning py-5">.col-6 .col-sm-4</div>
+							</div>
+						</div>
+						<img src="Images/CaptureColumnbreaks02.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Column breaks -->	
+				</section>
+				<!-- End Alignment -->
+				<hr class="mt-5">
+				<!-- Start Reordering -->
+				<section id="Reordering">
+					<h1 class="pt-4">Reordering</h1>
+					<!-- Start Order classes -->
+					<section id="Orderclasses">
+						<h2 class="pt-3">Order classes</h2>
+						<p class="lead">Les classes <span class="text-danger">.order</span> sert à contrôler l'ordre visuel du contenu. Ces classes sont réactives. On peut donc définir l'ordre par point d'arrêt. Indiquer une valeur de 1 à 12 compatible pour les cinq niveaux de grille.</p>
+						<h4>Exemple :</h4>
+						<div class="container border border-dark mb-5">
+							<div class="row">
+								<div class="col bg-danger p-5">First, but unordered</div>
+								<div class="col order-12 bg-warning p-5">Second, but last</div>
+								<div class="col order-1 bg-info p-5">Third, but first</div>
+							</div>
+						</div>
+						<img src="Images/CaptureOrderclasses01.png" class="img-fluid mb-3">
+						<p class="lead">Il existe également des classes <span class="text-danger">.order-first</span> et <span class="text-danger">.order-last</span> qui modifient l'ordre d'un élément. Ces classes peuvent également être mélangées avec les classes numérotées <span class="text-danger">.order-*</span> selon les besoins.</p>
+						<h4>Exemple :</h4>
+
+						<div class="container border border-dark mb-5">
+							<div class="row">
+								<div class="col order-last bg-danger p-5">First, but unordered</div>
+								<div class="col bg-warning p-5">Second, but last</div>
+								<div class="col order-first bg-info p-5">Third, but first</div>
+							</div>
+						</div>
+
+						<img src="Images/CaptureOrderclasses02.png" class="img-fluid mb-3">
+					</section>
+					<!-- End Order classes -->
+
+					<!-- Start Offsetting columns -->
+					<section id="Offsettingcolumns">
+						<h2 class="pt-3">Offsetting columns</h2>
+						<p class="lead">On peut décaler les colonnes de la grille de deux manières: <br>
+							- les classes <span class="text-danger">.offset-</span><br> 
+							- et les utilitaires de marge.<br>
+						Les classes sont dimensionnées pour correspondre aux colonnes, tandis que les marges sont plus utiles pour les présentations rapides où la largeur du décalage est variable.</p>
+						
+						<!-- Start Offset classes -->
+						<section id="Offsetclasses">
+							<h3 class="pt-2">Offset classes</h3>
+							<p class="lead">On Déplace les colonnes vers la droite en utilisant les classes <span class="text-danger">.offset-md-*</span>. Ces classes augmentent la marge gauche d'une colonne de <span class="text-danger">*</span> colonnes. Par exemple, <span class="text-danger">.offset-md-4</span> déplace <span class="text-danger">.col-md-4</span> sur quatre colonnes.</p>
+							<h4>Exemple :</h4>
+							<div class="container border border-dark mb-5">
+								<div class="row">
+									<div class="col-md-4 bg-danger p-5">col-md-4</div>
+									<div class="col-md-4 offset-md-4 bg-warning p-5">col-md-4 offset-md-4</div>
+								</div>
+								<div class="row my-2">
+									<div class="col-md-3 offset-md-3 bg-danger p-5">col-md-3 offset-md-3</div>
+									<div class="col-md-3 offset-md-3 bg-warning p-5">col-md-3 offset-md-3</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 offset-md-3 bg-danger p-5">col-md-6 offset-md-3</div>
+								</div>
+							</div>
+							<img src="Images/CaptureOffsetclasses01.png" class="img-fluid mb-3">
+							<p class="lead">En plus de l'effacement des colonnes aux points d'arrêt réactifs, On devra peut-être réinitialiser les décalages.</p>
+							<h4>Exemple :</h4>
+							<div class="container border border-dark mb-5">
+								<div class="row">
+									<div class="col-sm-5 col-md-6 bg-danger p-5">col-sm-5 col-md-6</div>
+									<div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0 bg-warning p-5">
+										col-sm-5 offset-sm-2 col-md-6 offset-md-0
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-sm-6 col-md-5 col-lg-6 bg-warning p-5">
+										col-sm-6 col-md-5 col-lg-6
+									</div>
+									<div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 bg-info p-5">
+										col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0
+									</div>
+								</div>
+							</div>
+							<img src="Images/CaptureOffsetclasses02.png" class="img-fluid mb-3">
+						</section>
+						<!-- End Offset classes -->
+
+						<!-- Start Margin utilities -->
+						<section id="Marginutilities">
+							<h3 class="pt-2">Margin utilities</h3>
+							<p class="lead">On peut utiliser des utilitaires de marge tels que <span class="text-danger">.mr-auto</span> pour forcer les colonnes soeurs à s’éloigner les unes des autres.</p>
+							<h4>Exemple :</h4>
+							<div class="container border border-dark mb-5">
+								<div class="row">
+									<div class="col-md-4 bg-danger p-5">col-md-4</div>
+									<div class="col-md-4 ml-auto bg-warning p-5">col-md-4 ml-auto</div>
+								</div>
+								<div class="row my-2">
+									<div class="col-md-3 ml-md-auto bg-danger p-5">col-md-3 ml-md-auto</div>
+									<div class="col-md-3 ml-md-auto bg-warning p-5">col-md-3 ml-md-auto</div>
+								</div>
+								<div class="row">
+									<div class="col-auto mr-auto bg-danger p-5">col-auto mr-auto</div>
+									<div class="col-auto bg-danger p-5">col-auto</div>
+								</div>
+							</div>
+							<img src="Images/CaptureMarginutilities.png" class="img-fluid mb-3">
+						</section>
+						<!-- End Margin utilities -->
+					</section>
+					<!-- End Offsetting columns -->	
+				</section>
+				<!-- End Reordering -->
+				<hr class="mt-5">
+				<!-- Start Nesting -->
+				<section id="Nesting">
+					<h2 class="pt-2">Nesting</h2>
+					<p class="lead">Pour imbriquer du contenu dans une grille, on ajoute une nouvelle colonne <span class="text-danger">.row</span> et un ensemble de colonnes <span class="text-danger">.col-sm-*</span> dans une colonne <span class="text-danger">.col-sm-*</span> existante. Les lignes imbriquées doivent inclure un ensemble de colonnes ne dépassant pas 12 (il n'est pas nécessaire d'utiliser les 12 colonnes disponibles).</p>
+					<h4>Exemple :</h4>
+					<div class="container border border-dark mb-5">
+						<div class="row">
+							<div class="col-sm-9 bg-info p-5">
+								Level 1: .col-sm-9
+								<div class="row">
+									<div class="col-8 col-sm-6 bg-danger p-5">Level 2: .col-8 .col-sm-6</div>
+									<div class="col-4 col-sm-6 bg-warning p-5">Level 2: .col-4 .col-sm-6</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img src="Images/CaptureNesting.png" class="img-fluid mb-3">
+				</section>
+				<!-- End Nesting -->
+			</section>
+			<!-- End contentSection -->
+
+			<!-- Start menuRightSection -->
+			<section id="menuRightSection" class="col-sm-3 border-left">
+				<nav id="menuGrid" class="navbar navbar-light sticky-top">
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link mb-1" href="#Howitworks">Comment ça marche</a>
+						<a class="nav-link mb-1" href="#Gridoptions">Options de grille</a>
+						<a class="nav-link mb-1" href="#Autolayoutcolumns">Auto-layout columns</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#Equalwidth">Equal-width</a>
+							<a class="nav-link ml-3" href="#Settingonecolumnwidth">Setting one column width</a>
+							<a class="nav-link ml-3" href="#Variablewidthcontent">Variable width content</a>
+							<a class="nav-link ml-3" href="#Equalwidthmultirow">Equal-width multi-row</a>
+						</nav>
+						<a class="nav-link mb-1" href="#Responsiveclasses">Responsive classes</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#Allbreakpoints">All breakpoints</a>
+							<a class="nav-link ml-3" href="#Stackedtohorizontal">Stacked to horizontal</a>
+							<a class="nav-link ml-3" href="#Mixandmatch">Mix and match</a>
+							<a class="nav-link ml-3" href="#Gutters">Gutters</a>
+						</nav>
+						<a class="nav-link mb-1" href="#Alignment">Alignment</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#Verticalalignment">Vertical alignment</a>
+							<a class="nav-link ml-3" href="#Horizontalalignment">Horizontal alignment</a>
+							<a class="nav-link ml-3" href="#Nogutters">No gutters</a>
+							<a class="nav-link ml-3" href="#Columnwrapping">Column wrapping</a>
+							<a class="nav-link ml-3" href="#Columnbreaks">Column breaks</a>
+						</nav>
+						<a class="nav-link mb-1" href="#Reordering">Reordering</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#Orderclasses">Order classes</a>
+							<a class="nav-link ml-3 mb-1" href="#Offsettingcolumns">Offsetting columns</a>
+							<nav class="nav nav-pills flex-column">
+								<a class="nav-link ml-4" href="#Offsetclasses">Offset classes</a>
+								<a class="nav-link ml-4" href="#Marginutilities">Margin utilities</a>
+							</nav>
+						</nav>
+						<a class="nav-link mb-1" href="#Nesting">Nesting</a>
+					</nav>
+				</nav>
+			</section>
+			<!-- End menuRightSection -->
+		</section>
+		<footer class="text-center text-muted">
+			<p class="lead mb-0">Présentation Bootstrap v4</p>
+			<small>Mai 2019</small>
+		</footer>
+	</main>
+
+	<!-- js sources -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<!-- <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
